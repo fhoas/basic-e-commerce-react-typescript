@@ -104,13 +104,18 @@ const Products: React.FC<ProductsProps> = ({ product, id }) => {
 
   return (
     <div className="flex justify-between items-center relative flex-col text-primary h-fit min-h-[350px] p-4 rounded cursor-pointer duration-500 border bg-gray9 border-gray6">
-      <span className="absolute right-[10px] top-[10px] z-10">
-        <img
-          className="h-[40px] w-[40px]"
-          src="https://cdn-icons-png.freepik.com/512/8754/8754132.png"
-          alt=""
-        />
-      </span>
+      {waiting === true ? (
+        ""
+      ) : (
+        <span className="absolute right-[10px] top-[10px] z-10">
+          <img
+            className="h-[40px] w-[40px]"
+            src="https://cdn-icons-png.freepik.com/512/8754/8754132.png"
+            alt=""
+          />
+        </span>
+      )}
+
       <div
         onClick={handleClick}
         className="flex justify-center items-center flex-col w-full"

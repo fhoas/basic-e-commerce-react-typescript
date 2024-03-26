@@ -32,7 +32,7 @@ function MenuCarousel() {
           ) : (
             <img
               className="w-full h-full max-h-[400px] rounded-[5px]"
-              src="https://img.freepik.com/free-vector/realistic-winter-sale-banner-template_52683-100252.jpg?w=2000&t=st=1711363892~exp=1711364492~hmac=66229b8408b1b0e38516b8b561d241ca074b5c277f2a2b0b062e609207e7cc0a"
+              src="/assets/banner.jpeg"
               alt=""
             />
           )}

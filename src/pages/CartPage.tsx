@@ -83,11 +83,11 @@ const CartPage: React.FC = () => {
           <ul className="flex flex-col bg-[#202020] bg-primary p-4 md:p-8 rounded gap-2 border-gray6 border">
             {cartProducts.map((product: any, index: number) => (
               <React.Fragment key={product.customId}>
-                <li className="flex items-center justify-between py-2">
-                  <div className="flex items-start flex-col sm:flex-row sm:space-x-4">
+                <li className="flex items-center justify-between gap-6 sm:gap-0 flex-col sm:flex-row py-2">
+                  <div className="flex items-start flex-row sm:space-x-4 w-full gap-4 sm:gap-0">
                     <div
                       onClick={() => handleProductClick(product.id)}
-                      className="h-[180px] w-[180px] flex items-center justify-center border-[1px] border-gray6 bg-gray10 rounded-[5px] p-2 cursor-pointer"
+                      className="h-[120px] w-[120px] sm:h-[180px] sm:w-[180px] flex items-center justify-center border-[1px] border-gray6 bg-gray9 rounded-[5px] p-2 cursor-pointer"
                     >
                       <img
                         className="w-fit max-h-[140px] aspect-squar rounded-[5px]"
@@ -95,9 +95,9 @@ const CartPage: React.FC = () => {
                         alt={product.title}
                       />
                     </div>
-                    <div className="mt-2">
+                    <div>
                       <p
-                        className={`text-2xl text-primary ${
+                        className={`text-lg sm:text-2xl text-primary ${
                           windowWidth < 600 ? "max-w-[300px]" : "max-w-[300px]"
                         }`}
                       >
@@ -113,9 +113,9 @@ const CartPage: React.FC = () => {
                       </p>
                     </div>
                   </div>
-                  <div>
-                    <div className="flex flex-col sm:flex-row mt-[11px] gap-4">
-                      <div className="flex items-center justify-center space-x-4 sm:space-x-4 bg-gray9 border-gray6 text-white border-[1px] px-4 py-2 rounded text-[10px] sm:text-small md:text-medium">
+                  <div className="w-full sm:w-fit">
+                    <div className="flex flex-row gap-4 w-full sm:w-full sm:flex-col ">
+                      <div className="flex items-center justify-center space-x-4 sm:space-x-4 bg-gray9 border-gray6 text-white border-[1px] px-4 py-2 rounded text-[10px] sm:text-small md:text-medium w-1/2 sm:w-full">
                         <button
                           className="text-gray5"
                           onClick={() => decreaseQuantity(product.customId)}
@@ -134,7 +134,7 @@ const CartPage: React.FC = () => {
                       </div>
                       <button
                         onClick={() => removeItem(product.customId)}
-                        className="bg-gray9 border-gray6 hover:bg-gray8 hover:border-gray5 text-white border-[1px] px-4 py-2 rounded text-md"
+                        className="bg-gray9 border-gray6 hover:bg-gray8 hover:border-gray5 text-white border-[1px] px-4 py-2 rounded text-md w-1/2 sm:w-full"
                       >
                         Remove
                       </button>
